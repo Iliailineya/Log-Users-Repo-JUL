@@ -56,7 +56,7 @@ public class UserCreateService {
             errors.put("last name", Constants.INPUT_REQ_MSG);
         }
         if (PhoneValidator.isPhoneValid(data[3])) {
-            errors.put("phone", Constants.INPUT_REQ_MSG);
+            errors.put("phone", Constants.WRONG_PHONE_MSG);
         }
 
         if (EmailValidator.isEmailNotValid(data[4])) {
