@@ -1,23 +1,24 @@
 package org.example.app.controllers;
 
-import org.example.app.services.ContactReadService;
+import org.example.app.services.operations.UserCreateService;
 import org.example.app.utils.AppStarter;
-import org.example.app.utils.Constants;
-import org.example.app.views.user_view.UserReadView;
+import org.example.app.constants.Constants;
+import org.example.app.views.user_view.UserCreateView;
 
-public class ContactReadController {
+public class UserCreateController {
 
-    ContactReadService service;
-    UserReadView view;
+    UserCreateView view;
+    UserCreateService service;
 
-    public ContactReadController(ContactReadService service, UserReadView view) {
+    public UserCreateController(UserCreateService service, UserCreateView view) {
         this.service = service;
         this.view = view;
     }
 
-    public void readContacts() {
-        // Получаем результат.
-        String str = service.readContacts();
+    public void createUser() {
+        // Получаем данные.
+        // Передаем данные на обработку и получаем результат.
+        String str = service.createUser(view.getData());
         // Проверяем результат.
         // Если БД отсутствует, выводим сообщение об этом
         // и закрываем приложение.
@@ -28,8 +29,8 @@ public class ContactReadController {
             // Закрываем приложение.
             System.exit(0);
         } else {
-            // Выводим уведомление или данные.
-            view.getOutput("\n______ CONTACTS ___________\n" + str);
+            // Выводим уведомление.
+            view.getOutput(str);
             // Перезапускаем приложение.
             AppStarter.startApp();
         }

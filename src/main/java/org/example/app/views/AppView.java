@@ -1,7 +1,7 @@
 package org.example.app.views;
 
 import org.example.app.utils.AppStarter;
-import org.example.app.utils.Constants;
+import org.example.app.constants.Constants;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

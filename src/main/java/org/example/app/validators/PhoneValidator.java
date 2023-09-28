@@ -1,6 +1,6 @@
 package org.example.app.validators;
 
-import org.example.app.utils.Constants;
+import org.example.app.constants.Constants;
 
 // Валидация телефона
 public class PhoneValidator {

@@ -1,0 +1,4 @@
+сент. 28, 2023 9:11:50 PM org.example.app.services.operations.UserCreateService checkDBExists
+SEVERE: Database is absent!
+сент. 28, 2023 9:11:50 PM org.example.app.services.operations.UserCreateService createUser
+WARNING: Data inputs incorrect.

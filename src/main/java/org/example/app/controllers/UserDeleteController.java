@@ -1,24 +1,24 @@
 package org.example.app.controllers;
 
-import org.example.app.services.ContactUpdateService;
+import org.example.app.services.operations.UserDeleteService;
 import org.example.app.utils.AppStarter;
-import org.example.app.utils.Constants;
-import org.example.app.views.user_view.UserUpdateView;
+import org.example.app.constants.Constants;
+import org.example.app.views.user_view.UserDeleteView;
 
-public class ContactUpdateController {
+public class UserDeleteController {
 
-    ContactUpdateService service;
-    UserUpdateView view;
+    UserDeleteService service;
+    UserDeleteView view;
 
-    public ContactUpdateController(ContactUpdateService service, UserUpdateView view) {
+    public UserDeleteController(UserDeleteService service, UserDeleteView view) {
         this.service = service;
         this.view = view;
     }
 
-    public void updateContact() {
+    public void deleteUser() {
         // Получаем данные.
         // Передаем данные на обработку и получаем результат.
-        String str = service.updateContact(view.getData());
+        String str = service.deleteUser(view.getData());
         // Проверяем результат.
         // Если БД отсутствует, выводим сообщение об этом
         // и закрываем приложение.

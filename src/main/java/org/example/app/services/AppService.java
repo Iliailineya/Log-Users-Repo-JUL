@@ -1,7 +1,12 @@
 package org.example.app.services;
 
+import org.example.app.constants.Constants;
 import org.example.app.controllers.*;
 import org.example.app.repositories.*;
+import org.example.app.services.operations.UserReadService;
+import org.example.app.services.operations.UserUpdateService;
+import org.example.app.services.operations.UserCreateService;
+import org.example.app.services.operations.UserDeleteService;
 import org.example.app.utils.*;
 import org.example.app.views.user_view.*;
 import org.example.app.exceptions.OptionException;
@@ -12,32 +17,32 @@ public class AppService {
         UserCreateRepository repository = new UserCreateRepository();
         UserCreateService service = new UserCreateService(repository);
         UserCreateView view = new UserCreateView();
-        ContactCreateController controller = new ContactCreateController(service, view);
-        controller.createContact();
+        UserCreateController controller = new UserCreateController(service, view);
+        controller.createUser();
     }
 
     public void readUsers() {
         UserReadRepository repository = new UserReadRepository();
-        ContactReadService service = new ContactReadService(repository);
+        UserReadService service = new UserReadService(repository);
         UserReadView view = new UserReadView();
-        ContactReadController controller = new ContactReadController(service, view);
-        controller.readContacts();
+        UserReadController controller = new UserReadController(service, view);
+        controller.readUsers();
     }
 
     public void updateUser() {
         UserUpdateRepository repository = new UserUpdateRepository();
-        ContactUpdateService service = new ContactUpdateService(repository);
+        UserUpdateService service = new UserUpdateService(repository);
         UserUpdateView view = new UserUpdateView();
-        ContactUpdateController controller = new ContactUpdateController(service, view);
-        controller.updateContact();
+        UserUpdateController controller = new UserUpdateController(service, view);
+        controller.updateUser();
     }
 
     public void deleteUser() {
         UserDeleteRepository repository = new UserDeleteRepository();
-        ContactDeleteService service = new ContactDeleteService(repository);
+        UserDeleteService service = new UserDeleteService(repository);
         UserDeleteView view = new UserDeleteView();
-        ContactDeleteController controller = new ContactDeleteController(service, view);
-        controller.deleteContact();
+        UserDeleteController controller = new UserDeleteController(service, view);
+        controller.deleteUser();
     }
 
     public void getNoSuchOption(int choice) {

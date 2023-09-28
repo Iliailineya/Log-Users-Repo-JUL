@@ -2,7 +2,7 @@ package org.example.app.repositories;
 
 import org.example.app.database.DBConn;
 import org.example.app.entities.User;
-import org.example.app.utils.Constants;
+import org.example.app.constants.Constants;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;

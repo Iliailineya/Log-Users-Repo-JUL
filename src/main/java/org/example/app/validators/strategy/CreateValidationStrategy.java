@@ -1,6 +1,7 @@
 package org.example.app.validators.strategy;
 
 import org.example.app.constants.Constants;
+import org.example.app.entities.User;
 import org.example.app.validators.EmailValidator;
 
 import java.util.HashMap;
@@ -22,11 +23,24 @@ public class CreateValidationStrategy implements ValidationStrategy {
         if (data[2].isEmpty()) {
             errors.put("last name", Constants.INPUT_REQ_MSG);
         }
+        if (data[3].isEmpty()) {
+            errors.put("phone", Constants.INPUT_REQ_MSG);
+        }
 
-        if (EmailValidator.isEmailValid(data[3])) {
+        if (!EmailValidator.isEmailValid(data[4])) {
             errors.put("email", Constants.WRONG_EMAIL_MSG);
         }
 
         return errors;
+    }
+
+    public User mapData(String[] data) {
+        User user = new User();
+        user.setUser_name(data[0]);
+        user.setFirst_name(data[1]);
+        user.setLast_name(data[2]);
+        user.setPhone(data[3]);
+        user.setEmail(data[4]);
+        return user;
     }
 }

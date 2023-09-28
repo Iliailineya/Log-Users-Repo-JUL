@@ -1,5 +1,6 @@
 package org.example.app.services;
 
+import org.example.app.entities.User;
 import org.example.app.validators.strategy.ValidationStrategy;
 
 import java.util.Map;
@@ -13,6 +14,10 @@ public class UserDataValidationService {
 
     public Map<String, String> validateUser(String[] data) {
         return validationStrategy.validate(data);
+    }
+
+    public User mapData(String[] data){
+        return validationStrategy.mapData(data);
     }
 }
 

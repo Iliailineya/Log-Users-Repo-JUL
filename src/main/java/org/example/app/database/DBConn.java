@@ -1,6 +1,6 @@
 package org.example.app.database;
 
-import org.example.app.utils.Constants;
+import org.example.app.constants.Constants;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
