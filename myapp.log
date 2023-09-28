@@ -1,0 +1,4 @@
+сент. 28, 2023 11:00:20 PM org.example.app.services.operations.UserDeleteService checkDBExists
+SEVERE: Database is absent!
+сент. 28, 2023 11:00:20 PM org.example.app.services.operations.UserDeleteService deleteUser
+WARNING: Data inputs incorrect.
