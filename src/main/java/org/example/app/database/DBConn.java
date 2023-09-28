@@ -15,7 +15,7 @@ public class DBConn {
 
         try {
             conn = DriverManager.getConnection(Constants.DB_DRIVER +
-                            Constants.DB_BASE_URL + Constants.DB_NAME);
+                            Constants.DB_BASE_URL);
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }

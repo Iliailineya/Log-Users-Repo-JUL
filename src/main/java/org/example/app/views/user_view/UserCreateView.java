@@ -14,12 +14,12 @@ public class UserCreateView extends InputOutputView {
         title = "Enter last name: ";
         String lastName = inputReader.readString(title);
 
-        title = "Enter email in format example@mail.com: ";
-        String email = inputReader.readString(title);
-
         title = "Enter phone in format xxx xxx-xxxx: ";
         String phone = inputReader.readString(title);
 
-        return new String[]{username, firstName, lastName, email, phone};
+        title = "Enter email in format example@mail.com: ";
+        String email = inputReader.readString(title);
+
+        return new String[]{username, firstName, lastName, phone, email};
     }
 }
